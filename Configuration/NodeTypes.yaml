@@ -1,0 +1,28 @@
+'Wwwision.Form.ContentReferences:ContentReferences':
+  superTypes:
+    'Neos.Form.Builder:FormElement': TRUE
+    'Neos.Form.Builder:IdentifierMixin': FALSE
+    'Neos.Form.Builder:DefaultValueMixin': FALSE
+    'Neos.Form.Builder:RequiredCheckboxMixin': FALSE
+    'Neos.Form.Builder:ValidatorsMixin': FALSE
+  ui:
+    label: 'Neos Content'
+    icon: 'icon-copy'
+    group: 'form.custom'
+    inspector:
+      groups:
+        'formElement':
+          icon: 'icon-copy'
+  options:
+    form:
+      formElementType: 'Wwwision.Form.ContentReferences:ContentReferences'
+  properties:
+    references:
+      type: 'references'
+      ui:
+        inspector:
+          group: 'formElement'
+          editorOptions:
+            nodeTypes: ['Neos.Neos:Content']
+        label: 'Content reference(s)'
+        reloadIfChanged: TRUE

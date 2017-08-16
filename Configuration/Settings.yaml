@@ -1,0 +1,15 @@
+Neos:
+  Form:
+    presets:
+      default:
+        formElementTypes:
+          'Wwwision.Form.ContentReferences:ContentReferences':
+            superTypes:
+              'Neos.Form:ReadOnlyFormElement': TRUE
+            properties:
+              references: []
+
+  Neos:
+    fusion:
+      autoInclude:
+        'Wwwision.Form.ContentReferences': TRUE

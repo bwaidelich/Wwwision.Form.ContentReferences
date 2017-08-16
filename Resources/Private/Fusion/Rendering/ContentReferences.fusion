@@ -1,0 +1,26 @@
+prototype(Wwwision.Form.ContentReferences:ContentReferences) < prototype(Neos.Form.FusionRenderer:FormElement) {
+    label {
+        tagName = 'h2'
+        attributes.for >
+    }
+    fieldContainer = Wwwision.Form.ContentReferences:ContentReferencesRendering
+}
+prototype(Wwwision.Form.ContentReferences:ContentReferencesRendering) < prototype(Neos.Fusion:Collection) {
+    collection = ${element.properties.references}
+    itemRenderer = Neos.Neos:ContentCase
+    itemName = 'node'
+
+    @cache {
+        mode = 'cached'
+        entryIdentifier {
+            node = ${element.renderingOptions._node}
+        }
+        entryTags {
+            1 = ${'Node_' + element.renderingOptions._node.identifier}
+            2 = ${Neos.Caching.nodeTag(element.properties.references)}
+            3 = ${Neos.Caching.descendantOfTag(element.properties.references)}
+        }
+    }
+}
+
+Wwwision_Form_ContentReferences_ContentReferences = Wwwision.Form.ContentReferences:ContentReferencesRendering

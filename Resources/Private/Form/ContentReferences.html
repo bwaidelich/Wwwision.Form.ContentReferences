@@ -1,0 +1,6 @@
+{namespace form=Neos\Form\ViewHelpers}
+{namespace this=Wwwision\Form\ContentReferences\ViewHelpers}
+<f:if condition="{element.label}">
+	<h2>{element -> form:translateElementProperty(property: 'label')}</h2>
+</f:if>
+<this:renderFusion fusionRuntime="{element.rootForm.renderingOptions._fusionRuntime}" path="Wwwision_Form_ContentReferences_ContentReferences" context="{element: element}" />

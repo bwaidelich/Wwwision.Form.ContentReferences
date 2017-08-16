@@ -1,0 +1,18 @@
+{
+    "description": "Flow package with a custom Flow Form Framework Form Element that renders Neos Content References",
+    "type": "neos-package",
+    "name": "wwwision/form-contentreferences",
+    "require": {
+        "neos/form-builder": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Wwwision\\Form\\ContentReferences\\": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "Wwwision.Form.ContentReferences"
+        }
+    }
+}
