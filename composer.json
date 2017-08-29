@@ -1,6 +1,7 @@
 {
     "description": "Flow package with a custom Flow Form Framework Form Element that renders Neos Content References",
     "type": "neos-package",
+    "license": "MIT",
     "name": "wwwision/form-contentreferences",
     "require": {
         "neos/form-builder": "*"
